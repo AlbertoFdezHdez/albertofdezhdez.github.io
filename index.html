@@ -60,6 +60,8 @@
   .rows li { display: grid; grid-template-columns: 84px 1fr; gap: 12px; margin-bottom: 10px; }
   .rows .what { color: var(--muted); font-size: 15px; display: block; }
 
+  #lang { font: inherit; font-size: 14px; color: var(--accent); background: none; border: 1px solid rgba(47,74,122,.35); border-radius: 3px; padding: 0 8px; cursor: pointer; line-height: 1.6; }
+  #lang:hover { border-color: var(--accent); }
   footer { margin-top: 64px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 14px; }
 
   @media (max-width: 600px) {
@@ -77,45 +79,46 @@
   <img src="photo.jpg" alt="Alberto Fernández-Hernández">
   <div>
     <h1>Alberto Fernández-Hernández</h1>
-    <p class="role">Ph.D. candidate in Deep Learning<br>Universitat Politècnica de València, Spain</p>
+    <p class="role"><span data-es="Doctorando en Deep Learning">Ph.D. candidate in Deep Learning</span><br>Universitat Politècnica de València, <span data-es="España">Spain</span></p>
     <ul class="links sans">
       <li><a href="mailto:a.fernandez@upv.es">a.fernandez@upv.es</a></li>
       <li><a href="https://github.com/AlbertoFdezHdez">GitHub</a></li>
       <li><a href="https://arxiv.org/search/?searchtype=author&query=Fern%C3%A1ndez-Hern%C3%A1ndez%2C+Alberto">arXiv</a></li>
       <li><a href="cv.pdf">CV (PDF)</a></li>
+      <li><button id="lang" class="sans" type="button" aria-label="Cambiar idioma / Change language">Español</button></li>
     </ul>
   </div>
 </header>
 
 <section id="about">
-  <h2 class="sans">About</h2>
-  <p>I am a Ph.D. candidate at the Universitat Politècnica de València, supervised by Enrique S. Quintana-Ortí, José Duato and Manuel F. Dolz. My thesis, <em>Understanding and Rethinking Deep Learning Training from Its Internal Foundations</em>, looks at what happens inside a network while it trains and tries to turn that into practical tools.</p>
-  <p>Most of my work falls into three lines: the dynamics of optimizers such as Adam (memory parameters, gradient-scale invariance, backward scale control); deterministic, structure-aware initialization; and activation patterns as a signal to diagnose and control training, from weight decay to federated aggregation.</p>
-  <p>Before deep learning I studied mathematics at the Universitat de València (B.Sc. and M.Sc. in Mathematical Research), where I worked on singularity theory.</p>
+  <h2 class="sans" data-es="Sobre mí">About</h2>
+  <p data-es="Soy doctorando en la Universitat Politècnica de València, bajo la dirección de Enrique S. Quintana-Ortí, José Duato y Manuel F. Dolz. Mi tesis, <em>Understanding and Rethinking Deep Learning Training from Its Internal Foundations</em>, estudia lo que ocurre dentro de una red mientras se entrena y trata de convertirlo en herramientas prácticas.">I am a Ph.D. candidate at the Universitat Politècnica de València, supervised by Enrique S. Quintana-Ortí, José Duato and Manuel F. Dolz. My thesis, <em>Understanding and Rethinking Deep Learning Training from Its Internal Foundations</em>, looks at what happens inside a network while it trains and tries to turn that into practical tools.</p>
+  <p data-es="Mi trabajo se organiza en tres líneas: la dinámica de optimizadores como Adam (parámetros de memoria, invarianza a la escala del gradiente, control de escala en el backward); la inicialización determinista y consciente de la estructura; y los patrones de activación como señal para diagnosticar y controlar el entrenamiento, desde el weight decay hasta la agregación federada.">Most of my work falls into three lines: the dynamics of optimizers such as Adam (memory parameters, gradient-scale invariance, backward scale control); deterministic, structure-aware initialization; and activation patterns as a signal to diagnose and control training, from weight decay to federated aggregation.</p>
+  <p data-es="Antes del deep learning estudié matemáticas en la Universitat de València (grado y máster en Investigación Matemática), donde trabajé en teoría de singularidades.">Before deep learning I studied mathematics at the Universitat de València (B.Sc. and M.Sc. in Mathematical Research), where I worked on singularity theory.</p>
 </section>
 
 <section id="news">
-  <h2 class="sans">News</h2>
+  <h2 class="sans" data-es="Noticias">News</h2>
   <ul class="news">
-    <li><span class="date sans">Nov 2026</span><span>Presenting <em>OUIDecay</em> at ICONIP 2026 in Melbourne, and <em>Sinusoidal Initialization</em> at CAEPIA 2026 in Jaén.</span></li>
-    <li><span class="date sans">Oct 2026</span><span>New preprint: <a href="https://arxiv.org/abs/2610.08624">Early Memory Selection for Balanced Adam</a>.</span></li>
-    <li><span class="date sans">Oct 2026</span><span><em>FedOUI</em> presented at FLTA 2026 (Paris, online).</span></li>
-    <li><span class="date sans">Jul 2026</span><span>Poster at the HiLD workshop at ICML 2026 (Seoul) and talk at AMLDS 2026 (Osaka).</span></li>
-    <li><span class="date sans">Dec 2025</span><span><a href="https://arxiv.org/abs/2505.12909">Sinusoidal Initialization</a> presented at NeurIPS 2025, San Diego.</span></li>
+    <li><span class="date sans" data-es="nov. 2026">Nov 2026</span><span data-es="Presento <em>OUIDecay</em> en ICONIP 2026 (Melbourne) y <em>Sinusoidal Initialization</em> en CAEPIA 2026 (Jaén).">Presenting <em>OUIDecay</em> at ICONIP 2026 in Melbourne, and <em>Sinusoidal Initialization</em> at CAEPIA 2026 in Jaén.</span></li>
+    <li><span class="date sans" data-es="oct. 2026">Oct 2026</span><span data-es="Nuevo preprint: <a href=&quot;https://arxiv.org/abs/2610.08624&quot;>Early Memory Selection for Balanced Adam</a>.">New preprint: <a href="https://arxiv.org/abs/2610.08624">Early Memory Selection for Balanced Adam</a>.</span></li>
+    <li><span class="date sans" data-es="oct. 2026">Oct 2026</span><span data-es="<em>FedOUI</em> presentado en FLTA 2026 (París, online)."><em>FedOUI</em> presented at FLTA 2026 (Paris, online).</span></li>
+    <li><span class="date sans" data-es="jul. 2026">Jul 2026</span><span data-es="Póster en el workshop HiLD de ICML 2026 (Seúl) y charla en AMLDS 2026 (Osaka).">Poster at the HiLD workshop at ICML 2026 (Seoul) and talk at AMLDS 2026 (Osaka).</span></li>
+    <li><span class="date sans" data-es="dic. 2025">Dec 2025</span><span data-es="<a href=&quot;https://arxiv.org/abs/2505.12909&quot;>Sinusoidal Initialization</a> presentado en NeurIPS 2025, San Diego."><a href="https://arxiv.org/abs/2505.12909">Sinusoidal Initialization</a> presented at NeurIPS 2025, San Diego.</span></li>
   </ul>
 </section>
 
 <section id="publications">
-  <h2 class="sans">Publications</h2>
+  <h2 class="sans" data-es="Publicaciones">Publications</h2>
 
-  <h3>Optimization and training dynamics</h3>
+  <h3 data-es="Optimización y dinámica del entrenamiento">Optimization and training dynamics</h3>
   <ul class="pubs">
     <li><span class="t">Early Memory Selection for Balanced Adam</span>
       <span class="a"><u>A. Fernández-Hernández</u>, C. Pérez-Corral, J. I. Mestre, M. F. Dolz, E. S. Quintana-Ortí</span>
       <span class="v">Preprint, 2026. <span class="l sans"><a href="https://arxiv.org/abs/2610.08624">arXiv</a><a href="https://github.com/AlbertoFdezHdez/Adam_beta_rule_cubic">code</a></span></span></li>
     <li><span class="t">Refresh-Scaling the Memory of Balanced Adam</span>
       <span class="a"><u>A. Fernández-Hernández</u>, C. Pérez-Corral, J. I. Mestre, M. F. Dolz, E. S. Quintana-Ortí</span>
-      <span class="v">HiLD Workshop @ ICML 2026, Seoul. <span class="l sans"><a href="https://arxiv.org/abs/2605.10119">arXiv</a><a href="https://github.com/AlbertoFdezHdez/Adam_beta_value">code</a></span></span></li>
+      <span class="v">HiLD Workshop @ ICML 2026, <span data-es="Seúl.">Seoul.</span> <span class="l sans"><a href="https://arxiv.org/abs/2605.10119">arXiv</a><a href="https://github.com/AlbertoFdezHdez/Adam_beta_value">code</a></span></span></li>
     <li><span class="t">Why β<sub>1</sub> = β<sub>2</sub> Is Dynamically Special in Adam</span>
       <span class="a"><u>A. Fernández-Hernández</u>, C. Pérez-Corral, J. I. Mestre, M. F. Dolz, E. S. Quintana-Ortí</span>
       <span class="v">Preprint, 2026. <span class="l sans"><a href="https://arxiv.org/abs/2601.21739">arXiv</a><a href="https://github.com/AlbertoFdezHdez/Adam_equal_betas">code</a></span></span></li>
@@ -124,18 +127,18 @@
       <span class="v">Preprint, 2026. <span class="l sans"><a href="https://arxiv.org/abs/2605.19856">arXiv</a></span></span></li>
   </ul>
 
-  <h3>Initialization</h3>
+  <h3 data-es="Inicialización">Initialization</h3>
   <ul class="pubs">
     <li><span class="t">Sinusoidal Initialization, Time for a New Start</span>
       <span class="a"><u>A. Fernández-Hernández</u>, J. I. Mestre, M. F. Dolz, J. Duato, E. S. Quintana-Ortí</span>
       <span class="v">NeurIPS 2025. <span class="l sans"><a href="https://proceedings.neurips.cc/paper_files/paper/2025/file/621dc667e65dce3ba19d882c7f2df1a7-Paper-Conference.pdf">paper</a><a href="https://arxiv.org/abs/2505.12909">arXiv</a><a href="https://github.com/AlbertoFdezHdez/Sinusoidal_Init">code</a></span></span></li>
   </ul>
 
-  <h3>Activation patterns and controllable training</h3>
+  <h3 data-es="Patrones de activación y entrenamiento controlable">Activation patterns and controllable training</h3>
   <ul class="pubs">
     <li><span class="t">FedOUI: OUI-Guided Client Weighting for Federated Aggregation</span>
       <span class="a"><u>A. Fernández-Hernández</u>, J. I. Mestre, C. Pérez-Corral, M. F. Dolz, J. Duato, E. S. Quintana-Ortí</span>
-      <span class="v">FLTA 2026, Paris. <span class="l sans"><a href="https://arxiv.org/abs/2605.11571">arXiv</a><a href="https://github.com/AlbertoFdezHdez/FedOUI">code</a></span></span></li>
+      <span class="v">FLTA 2026, <span data-es="París.">Paris.</span> <span class="l sans"><a href="https://arxiv.org/abs/2605.11571">arXiv</a><a href="https://github.com/AlbertoFdezHdez/FedOUI">code</a></span></span></li>
     <li><span class="t">OUIDecay: Adaptive Layer-wise Weight Decay for CNNs Using Online Activation Patterns</span>
       <span class="a"><u>A. Fernández-Hernández</u>, J. I. Mestre, C. Pérez-Corral, M. F. Dolz, J. Duato, E. S. Quintana-Ortí</span>
       <span class="v">ICONIP 2026, Melbourne. <span class="l sans"><a href="https://arxiv.org/abs/2605.10161">arXiv</a><a href="https://github.com/AlbertoFdezHdez/OUIDecay">code</a></span></span></li>
@@ -153,50 +156,67 @@
       <span class="v">AMLDS 2025, Tokyo. <span class="l sans"><a href="https://doi.org/10.1109/AMLDS63918.2025.11159348">DOI</a><a href="https://arxiv.org/abs/2504.17160">arXiv</a><a href="https://github.com/AlbertoFdezHdez/OUI">code</a></span></span></li>
   </ul>
 
-  <h3>Mathematics: singularity theory</h3>
+  <h3 data-es="Matemáticas: teoría de singularidades">Mathematics: singularity theory</h3>
   <ul class="pubs">
     <li><span class="t">Disentangling mappings defined on ICIS</span>
       <span class="a"><u>A. Fernández-Hernández</u>, J. J. Nuño-Ballesteros</span>
       <span class="v">Revista Matemática Complutense 38 (2025), 549–571. <span class="l sans"><a href="https://doi.org/10.1007/s13163-024-00507-3">DOI</a><a href="https://arxiv.org/abs/2309.16193">arXiv</a></span></span></li>
     <li><span class="t">A note on complex plane curve singularities up to diffeomorphism and their rigidity</span>
       <span class="a"><u>A. Fernández-Hernández</u>, R. Giménez Conejero</span>
-      <span class="v">Research in the Mathematical Sciences 11 (2024), article 28. <span class="l sans"><a href="https://doi.org/10.1007/s40687-024-00439-w">DOI</a><a href="https://arxiv.org/abs/2309.12958">arXiv</a></span></span></li>
+      <span class="v">Research in the Mathematical Sciences 11 (2024), <span data-es="artículo 28.">article 28.</span> <span class="l sans"><a href="https://doi.org/10.1007/s40687-024-00439-w">DOI</a><a href="https://arxiv.org/abs/2309.12958">arXiv</a></span></span></li>
     <li><span class="t">Disentangling mappings defined on ICIS</span>
       <span class="a"><u>A. Fernández-Hernández</u></span>
-      <span class="v">Master's thesis, 2023. <span class="l sans"><a href="https://arxiv.org/abs/2403.19678">arXiv</a></span></span></li>
+      <span class="v"><span data-es="Trabajo Fin de Máster, 2023.">Master's thesis, 2023.</span> <span class="l sans"><a href="https://arxiv.org/abs/2403.19678">arXiv</a></span></span></li>
     <li><span class="t">On the topological classification of complex plane curve singularities</span>
       <span class="a"><u>A. Fernández-Hernández</u></span>
-      <span class="v">Bachelor's thesis, 2022. <span class="l sans"><a href="https://arxiv.org/abs/2402.13941">arXiv</a></span></span></li>
+      <span class="v"><span data-es="Trabajo Fin de Grado, 2022.">Bachelor's thesis, 2022.</span> <span class="l sans"><a href="https://arxiv.org/abs/2402.13941">arXiv</a></span></span></li>
   </ul>
 </section>
 
 <section id="talks">
-  <h2 class="sans">Talks and presentations</h2>
+  <h2 class="sans" data-es="Charlas y presentaciones">Talks and presentations</h2>
   <ul class="rows">
-    <li><span class="date sans">Nov 2026</span><span>ICONIP 2026, Melbourne <span class="what">Oral presentation: OUIDecay</span></span></li>
-    <li><span class="date sans">Nov 2026</span><span>CAEPIA 2026, Jaén <span class="what">Oral presentation: Sinusoidal Initialization</span></span></li>
-    <li><span class="date sans">Oct 2026</span><span>FLTA 2026, Paris <span class="what">Online presentation: FedOUI</span></span></li>
-    <li><span class="date sans">Jul 2026</span><span>AMLDS 2026, Osaka <span class="what">Oral presentation: When Learning Rates Go Wrong</span></span></li>
-    <li><span class="date sans">Jul 2026</span><span>ICML 2026, Seoul <span class="what">Poster at the HiLD workshop: Refresh-Scaling the Memory of Balanced Adam</span></span></li>
-    <li><span class="date sans">Jun 2026</span><span>ACDL 2026, Tuscany <span class="what">Poster: Sinusoidal Initialization</span></span></li>
-    <li><span class="date sans">Jan 2026</span><span>Fourth UMI Workshop on Mathematics for AI &amp; ML, Sapienza University of Rome <span class="what">Talk: Activation patterns as a unifying principle for efficient and interpretable deep learning</span></span></li>
-    <li><span class="date sans">Dec 2025</span><span>NeurIPS 2025, San Diego <span class="what">Poster: Sinusoidal Initialization</span></span></li>
-    <li><span class="date sans">Oct 2025</span><span>BCAM Workshop on Scientific ML and Uncertainty Quantification, Bilbao <span class="what">Talk: Activation patterns as a unifying principle for efficient and interpretable deep learning</span></span></li>
-    <li><span class="date sans">Jul 2025</span><span>AMLDS 2025, Tokyo <span class="what">Oral presentation: OUI Need to Talk About Weight Decay</span></span></li>
+    <li><span class="date sans" data-es="nov. 2026">Nov 2026</span><span>ICONIP 2026, Melbourne <span class="what"><span data-es="Presentación oral:">Oral presentation:</span> OUIDecay</span></span></li>
+    <li><span class="date sans" data-es="nov. 2026">Nov 2026</span><span>CAEPIA 2026, Jaén <span class="what"><span data-es="Presentación oral:">Oral presentation:</span> Sinusoidal Initialization</span></span></li>
+    <li><span class="date sans" data-es="oct. 2026">Oct 2026</span><span>FLTA 2026, Paris <span class="what"><span data-es="Presentación online:">Online presentation:</span> FedOUI</span></span></li>
+    <li><span class="date sans" data-es="jul. 2026">Jul 2026</span><span>AMLDS 2026, Osaka <span class="what"><span data-es="Presentación oral:">Oral presentation:</span> When Learning Rates Go Wrong</span></span></li>
+    <li><span class="date sans" data-es="jul. 2026">Jul 2026</span><span>ICML 2026, <span data-es="Seúl">Seoul</span> <span class="what"><span data-es="Póster en el workshop HiLD:">Poster at the HiLD workshop:</span> Refresh-Scaling the Memory of Balanced Adam</span></span></li>
+    <li><span class="date sans" data-es="jun. 2026">Jun 2026</span><span>ACDL 2026, <span data-es="Toscana">Tuscany</span> <span class="what"><span data-es="Póster:">Poster:</span> Sinusoidal Initialization</span></span></li>
+    <li><span class="date sans" data-es="ene. 2026">Jan 2026</span><span><span data-es="Cuarto Workshop UMI sobre Matemáticas para IA y ML, Universidad Sapienza de Roma">Fourth UMI Workshop on Mathematics for AI &amp; ML, Sapienza University of Rome</span> <span class="what"><span data-es="Charla:">Talk:</span> Activation patterns as a unifying principle for efficient and interpretable deep learning</span></span></li>
+    <li><span class="date sans" data-es="dic. 2025">Dec 2025</span><span>NeurIPS 2025, San Diego <span class="what"><span data-es="Póster:">Poster:</span> Sinusoidal Initialization</span></span></li>
+    <li><span class="date sans" data-es="oct. 2025">Oct 2025</span><span><span data-es="Workshop del BCAM sobre ML científico y cuantificación de incertidumbre, Bilbao">BCAM Workshop on Scientific ML and Uncertainty Quantification, Bilbao</span> <span class="what"><span data-es="Charla:">Talk:</span> Activation patterns as a unifying principle for efficient and interpretable deep learning</span></span></li>
+    <li><span class="date sans" data-es="jul. 2025">Jul 2025</span><span>AMLDS 2025, Tokyo <span class="what"><span data-es="Presentación oral:">Oral presentation:</span> OUI Need to Talk About Weight Decay</span></span></li>
   </ul>
-  <p class="sans" style="font-size:14px;color:var(--muted);margin-top:14px">Full list of conferences attended in the <a href="cv.pdf">CV</a>.</p>
+  <p class="sans" style="font-size:14px;color:var(--muted);margin-top:14px"><span data-es="Lista completa de congresos en el <a href=&quot;cv.pdf&quot;>CV</a>.">Full list of conferences attended in the <a href="cv.pdf">CV</a>.</span></p>
 </section>
 
 <section id="education">
-  <h2 class="sans">Education</h2>
+  <h2 class="sans" data-es="Formación">Education</h2>
   <ul class="rows">
-    <li><span class="date sans">2023–now</span><span>Ph.D. in Deep Learning, Universitat Politècnica de València</span></li>
-    <li><span class="date sans">2022–2023</span><span>M.Sc. in Mathematical Research, Universitat de València &amp; UPV <span class="what">9.9/10 · Extraordinary Master's Degree Award</span></span></li>
-    <li><span class="date sans">2017–2022</span><span>B.Sc. in Mathematics, Universitat de València <span class="what">9.64/10 · Extraordinary Bachelor's Degree Award</span></span></li>
+    <li><span class="date sans" data-es="2023–hoy">2023–now</span><span data-es="Doctorado en Deep Learning, Universitat Politècnica de València">Ph.D. in Deep Learning, Universitat Politècnica de València</span></li>
+    <li><span class="date sans">2022–2023</span><span><span data-es="Máster en Investigación Matemática, Universitat de València y UPV">M.Sc. in Mathematical Research, Universitat de València &amp; UPV</span> <span class="what" data-es="9,9/10 · Premio Extraordinario de Máster">9.9/10 · Extraordinary Master's Degree Award</span></span></li>
+    <li><span class="date sans">2017–2022</span><span><span data-es="Grado en Matemáticas, Universitat de València">B.Sc. in Mathematics, Universitat de València</span> <span class="what" data-es="9,64/10 · Premio Extraordinario de Grado">9.64/10 · Extraordinary Bachelor's Degree Award</span></span></li>
   </ul>
 </section>
 
-<footer class="sans">Last updated November 2026.</footer>
+<footer class="sans" data-es="Última actualización: noviembre de 2026.">Last updated November 2026.</footer>
 </main>
+<script>
+(function () {
+  var nodes = document.querySelectorAll('[data-es]');
+  for (var i = 0; i < nodes.length; i++) nodes[i].setAttribute('data-en', nodes[i].innerHTML);
+  var btn = document.getElementById('lang');
+  function apply(lang) {
+    for (var i = 0; i < nodes.length; i++) nodes[i].innerHTML = nodes[i].getAttribute('data-' + lang);
+    document.documentElement.lang = lang;
+    btn.textContent = lang === 'es' ? 'English' : 'Español';
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  btn.addEventListener('click', function () { apply(document.documentElement.lang === 'es' ? 'en' : 'es'); });
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (saved === 'es') apply('es');
+})();
+</script>
 </body>
 </html>
